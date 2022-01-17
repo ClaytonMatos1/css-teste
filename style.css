@@ -34,15 +34,15 @@ body {
 }
 
 .img-fogos {
-    width: 256px;
-    height: 256px;
+    width: 356px;
+    height: 356px;
 }
 
 .img-fogos img {
     width: 100%;
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
-    /* animation: bustFireworks 15s 5s 1 backwards; */
+    animation: bustFireworks 15s 5s 1 backwards;
 }
 
 @keyframes bustFireworks {
@@ -62,14 +62,46 @@ body {
 .balloon {
     width: 0;
     height: 0;
-    border: 16px solid yellow;
+    border-style: solid;
+    border-width: 20px;
     border-radius: 50%;
-    margin-top: -146px;
+    opacity: 0;
+
+    animation: bustBalloon 100ms 5s 1;
+}
+
+.balloon1, .balloon2 {
+    margin-top: -200px;
+}
+
+.balloon1 {
+    border-color: #f6753945;
+}
+
+.balloon2 {
+    margin-left: 16px;
+    border-color: #f1ac3645;
+}
+
+.balloon3 {
+    margin-top: -176px;
+    margin-right: 10px;
+    border-color: #e1db3545;
+}
+
+@keyframes bustBalloon {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .trace {
     width: 0;
-    height: 400px;
+    height: 340px;
     border: 2px solid #fff;
     margin-top: -10px;
     z-index: -1;
@@ -80,7 +112,7 @@ body {
     margin-left: 60px;
     transform: skew(10deg) translateY(410px);
 
-    animation: moveTrace1 5s linear infinite;
+    animation: moveTrace1 5s linear 1;
 }
 
 @keyframes moveTrace1 {
@@ -98,7 +130,7 @@ body {
     margin-left: 10px;
     transform: translateY(410px);
 
-    animation: moveTrace2 5s linear infinite;
+    animation: moveTrace2 5s linear 1;
 }
 
 @keyframes moveTrace2 {
@@ -113,11 +145,10 @@ body {
 
 .trace3 {
     border-image: linear-gradient(to top, #1576bd, #e1db35) 1 100%;
-    /* margin-top: -20px; */
     margin-right: 80px;
     transform: skew(-10deg) translateY(410px);
 
-    animation: moveTrace3 5s linear infinite;
+    animation: moveTrace3 5s linear 1;
 }
 
 @keyframes moveTrace3 {
