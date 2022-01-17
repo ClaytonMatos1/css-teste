@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    background: url(./img/ceu_noturno.jpg);
+
+    animation: moveSky 55s linear infinite backwards;
+}
+
+@keyframes moveSky {
+    from {
+        background-position-y: top;
+        background-position-x: left;
+    }
+
+    to {
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.fogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-fogos {
+    width: 256px;
+    height: 256px;
+}
+
+.img-fogos img {
+    width: 100%;
+    opacity: 1;
+    z-index: 1;
+    /* animation: bustFireworks 15s 5s 1 backwards; */
+}
+
+@keyframes bustFireworks {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    65% {
+        opacity: 1;
+    }
+}
+
+.balloon {
+    width: 0;
+    height: 0;
+    border: 16px solid yellow;
+    border-radius: 50%;
+    margin-top: -146px;
+}
+
+.trace {
+    width: 0;
+    height: 400px;
+    border: 2px solid #fff;
+    margin-top: -10px;
+    z-index: -1;
+}
+
+.trace1 {
+    border-color: #f6753975;
+    margin-left: 60px;
+    transform: skew(10deg) translateY(410px);
+
+    animation: moveTrace1 5s linear infinite;
+}
+
+@keyframes moveTrace1 {
+    from {
+        transform: skew(10deg) translateY(410px);
+    }
+
+    to {
+        transform: skew(10deg) translateY(0);
+    }
+}
+
+.trace2 {
+    border-image: linear-gradient(to top, #f14759, #f1ac36) 1 100%;
+    margin-left: 10px;
+    transform: translateY(410px);
+
+    animation: moveTrace2 5s linear infinite;
+}
+
+@keyframes moveTrace2 {
+    from {
+        transform: translateY(410px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.trace3 {
+    border-image: linear-gradient(to top, #1576bd, #e1db35) 1 100%;
+    /* margin-top: -20px; */
+    margin-right: 80px;
+    transform: skew(-10deg) translateY(410px);
+
+    animation: moveTrace3 5s linear infinite;
+}
+
+@keyframes moveTrace3 {
+    from {
+        transform: skew(-10deg) translateY(410px);
+    }
+
+    to {
+        transform: skew(-10deg) translateY(0);
+    }
+}
